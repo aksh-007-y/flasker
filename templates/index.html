@@ -6,8 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello {{username}} !!!!!!</h1>
-    <h1>What's-upp !!!!!!</h1>
+    {% extends 'base.html' %}
+    {% block content %}
+        <h1>Hello {{username}} !!!!!!</h1>
+        <h1>How Is It !!!!!!</h1>
+        <h1>The Web Page Is Looking Cool Isn't It!!!</h1>
+    {% endblock %}
 
 </body>
 </html>
