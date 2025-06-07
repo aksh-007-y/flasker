@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_page</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+
+    {% for message in get_flashed_messages() %}
+       <div class="alert alert-primary" role="alert">
+        {{ message }}
+
+        </div>
+    {% endfor %}
+
+    {% if name %}
+
+    <h2>Hello {{name}} !!!!!!</h2>
+    <h2>How Is It Looking</h2>
+    <h2>Is It Looking Like some Cool Stuff Or Not !!!! </h2>
+
+    {% else %}
+
+    <br>
+    <form method="POST">
+        {{form.hidden_tag()}}
+        {{ form.name.label }}
+        {{ form.name() }}
+        <br>
+        {{form.hidden_tag()}}
+        {{form.password.label}}
+        {{ form.password() }}
+        <br>
+        {{ form.submit( class="btn btn-danger" ) }}
+
+    </form>
+
+
+    {% endif %}
+    
+    {% endblock %}
+        
+</body>
+</html>

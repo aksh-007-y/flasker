@@ -8,15 +8,15 @@
 <body>
     {% extends 'base.html' %}
     {% block content %}
-    <h1>Heyy {{users_name}} !! </h1>
-    <h2>This Is My First page </h2>
-    <h3>isn't It Cool Stuff !!!</h3>
-    <h2> {{stuff|safe}} </h2>
-    <h2>Venue:</h2>
-    {% for items in food   %}
-    <li>
-        {{items}}
-    </li></br>
+        <h1>Heyy {{users_name}} !! </h1>
+        <h2>This Is My First page </h2>
+        <h3>isn't It Cool Stuff !!!</h3>
+        <h2> {{stuff|safe}} </h2>
+        <h2>Venue:</h2>
+        {% for items in food   %}
+        <li>
+            {{items}}
+        </li></br>
     {% endfor  %}
     {% endblock %}
     

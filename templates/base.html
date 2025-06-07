@@ -78,7 +78,7 @@
     <!-- Enhanced Navbar -->
     <div class="navbar">
         <a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a>
-        <a href="{{url_for('next',name='sanju')}}" class="{% if request.path.startswith('/user/') %}active{% endif %}">User Page</a>
+        <a href="{{url_for('login_page')}}" class="{% if request.path.startswith('/user/') %}active{% endif %}">User Page</a>
     </div>
 
     <!-- Content block for child templates -->
