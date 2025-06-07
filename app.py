@@ -14,7 +14,7 @@ class namerform(FlaskForm):
 
 
 #Creating a Login page
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/userpage', methods=['GET', 'POST'])
 def login_page():
     name = None
     password = None
@@ -37,11 +37,10 @@ def login_page():
 #Using The jInja Properties
 @app.route('/')
 def homepage():
-    user="raj"
     stuff="This Some Random shitt!!"
     food=["pizza","samosa","jeraa","vadapav","khachori"]
     return render_template('home_page.html'
-                           ,users_name=user, stuff=stuff, food=food )
+                           , stuff=stuff, food=food )
 
 
 #Using The URL Sytnax
